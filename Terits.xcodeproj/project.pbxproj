@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B162D97B2B06004500BC75C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97A2B06004500BC75C8 /* AppDelegate.swift */; };
+		B162D97D2B06004500BC75C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97C2B06004500BC75C8 /* SceneDelegate.swift */; };
+		B162D97F2B06004500BC75C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97E2B06004500BC75C8 /* ViewController.swift */; };
+		B162D9822B06004500BC75C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B162D9802B06004500BC75C8 /* Main.storyboard */; };
+		B162D9842B06004700BC75C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B162D9832B06004700BC75C8 /* Assets.xcassets */; };
+		B162D9872B06004700BC75C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B162D9852B06004700BC75C8 /* LaunchScreen.storyboard */; };
+		B162D9922B06004800BC75C8 /* TeritsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D9912B06004800BC75C8 /* TeritsTests.swift */; };
+		B162D99C2B06004800BC75C8 /* TeritsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D99B2B06004800BC75C8 /* TeritsUITests.swift */; };
+		B162D99E2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D99D2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B162D98E2B06004700BC75C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B162D96F2B06004500BC75C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B162D9762B06004500BC75C8;
+			remoteInfo = Terits;
+		};
+		B162D9982B06004800BC75C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B162D96F2B06004500BC75C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B162D9762B06004500BC75C8;
+			remoteInfo = Terits;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B162D9772B06004500BC75C8 /* Terits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terits.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B162D97A2B06004500BC75C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B162D97C2B06004500BC75C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B162D97E2B06004500BC75C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B162D9812B06004500BC75C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B162D9832B06004700BC75C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B162D9862B06004700BC75C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B162D9882B06004700BC75C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B162D98D2B06004700BC75C8 /* TeritsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeritsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B162D9912B06004800BC75C8 /* TeritsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeritsTests.swift; sourceTree = "<group>"; };
+		B162D9972B06004800BC75C8 /* TeritsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeritsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B162D99B2B06004800BC75C8 /* TeritsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeritsUITests.swift; sourceTree = "<group>"; };
+		B162D99D2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeritsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B162D9742B06004500BC75C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D98A2B06004700BC75C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D9942B06004800BC75C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B162D96E2B06004500BC75C8 = {
+			isa = PBXGroup;
+			children = (
+				B162D9792B06004500BC75C8 /* Terits */,
+				B162D9902B06004800BC75C8 /* TeritsTests */,
+				B162D99A2B06004800BC75C8 /* TeritsUITests */,
+				B162D9782B06004500BC75C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B162D9782B06004500BC75C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B162D9772B06004500BC75C8 /* Terits.app */,
+				B162D98D2B06004700BC75C8 /* TeritsTests.xctest */,
+				B162D9972B06004800BC75C8 /* TeritsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B162D9792B06004500BC75C8 /* Terits */ = {
+			isa = PBXGroup;
+			children = (
+				B162D9AA2B06006400BC75C8 /* Config */,
+				B162D97A2B06004500BC75C8 /* AppDelegate.swift */,
+				B162D97C2B06004500BC75C8 /* SceneDelegate.swift */,
+				B162D97E2B06004500BC75C8 /* ViewController.swift */,
+				B162D9802B06004500BC75C8 /* Main.storyboard */,
+				B162D9832B06004700BC75C8 /* Assets.xcassets */,
+				B162D9852B06004700BC75C8 /* LaunchScreen.storyboard */,
+				B162D9882B06004700BC75C8 /* Info.plist */,
+			);
+			path = Terits;
+			sourceTree = "<group>";
+		};
+		B162D9902B06004800BC75C8 /* TeritsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B162D9912B06004800BC75C8 /* TeritsTests.swift */,
+			);
+			path = TeritsTests;
+			sourceTree = "<group>";
+		};
+		B162D99A2B06004800BC75C8 /* TeritsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B162D99B2B06004800BC75C8 /* TeritsUITests.swift */,
+				B162D99D2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift */,
+			);
+			path = TeritsUITests;
+			sourceTree = "<group>";
+		};
+		B162D9AA2B06006400BC75C8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B162D9762B06004500BC75C8 /* Terits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B162D9A12B06004800BC75C8 /* Build configuration list for PBXNativeTarget "Terits" */;
+			buildPhases = (
+				B162D9732B06004500BC75C8 /* Sources */,
+				B162D9742B06004500BC75C8 /* Frameworks */,
+				B162D9752B06004500BC75C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Terits;
+			productName = Terits;
+			productReference = B162D9772B06004500BC75C8 /* Terits.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B162D98C2B06004700BC75C8 /* TeritsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B162D9A42B06004800BC75C8 /* Build configuration list for PBXNativeTarget "TeritsTests" */;
+			buildPhases = (
+				B162D9892B06004700BC75C8 /* Sources */,
+				B162D98A2B06004700BC75C8 /* Frameworks */,
+				B162D98B2B06004700BC75C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B162D98F2B06004700BC75C8 /* PBXTargetDependency */,
+			);
+			name = TeritsTests;
+			productName = TeritsTests;
+			productReference = B162D98D2B06004700BC75C8 /* TeritsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B162D9962B06004800BC75C8 /* TeritsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B162D9A72B06004800BC75C8 /* Build configuration list for PBXNativeTarget "TeritsUITests" */;
+			buildPhases = (
+				B162D9932B06004800BC75C8 /* Sources */,
+				B162D9942B06004800BC75C8 /* Frameworks */,
+				B162D9952B06004800BC75C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B162D9992B06004800BC75C8 /* PBXTargetDependency */,
+			);
+			name = TeritsUITests;
+			productName = TeritsUITests;
+			productReference = B162D9972B06004800BC75C8 /* TeritsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B162D96F2B06004500BC75C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B162D9762B06004500BC75C8 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					B162D98C2B06004700BC75C8 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B162D9762B06004500BC75C8;
+					};
+					B162D9962B06004800BC75C8 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B162D9762B06004500BC75C8;
+					};
+				};
+			};
+			buildConfigurationList = B162D9722B06004500BC75C8 /* Build configuration list for PBXProject "Terits" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B162D96E2B06004500BC75C8;
+			productRefGroup = B162D9782B06004500BC75C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B162D9762B06004500BC75C8 /* Terits */,
+				B162D98C2B06004700BC75C8 /* TeritsTests */,
+				B162D9962B06004800BC75C8 /* TeritsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B162D9752B06004500BC75C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B162D9872B06004700BC75C8 /* LaunchScreen.storyboard in Resources */,
+				B162D9842B06004700BC75C8 /* Assets.xcassets in Resources */,
+				B162D9822B06004500BC75C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D98B2B06004700BC75C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D9952B06004800BC75C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B162D9732B06004500BC75C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B162D97F2B06004500BC75C8 /* ViewController.swift in Sources */,
+				B162D97B2B06004500BC75C8 /* AppDelegate.swift in Sources */,
+				B162D97D2B06004500BC75C8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D9892B06004700BC75C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B162D9922B06004800BC75C8 /* TeritsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B162D9932B06004800BC75C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B162D99C2B06004800BC75C8 /* TeritsUITests.swift in Sources */,
+				B162D99E2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B162D98F2B06004700BC75C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B162D9762B06004500BC75C8 /* Terits */;
+			targetProxy = B162D98E2B06004700BC75C8 /* PBXContainerItemProxy */;
+		};
+		B162D9992B06004800BC75C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B162D9762B06004500BC75C8 /* Terits */;
+			targetProxy = B162D9982B06004800BC75C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B162D9802B06004500BC75C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B162D9812B06004500BC75C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B162D9852B06004700BC75C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B162D9862B06004700BC75C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B162D99F2B06004800BC75C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B162D9A02B06004800BC75C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B162D9A22B06004800BC75C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Terits/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.Terits;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B162D9A32B06004800BC75C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Terits/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.Terits;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B162D9A52B06004800BC75C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.TeritsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Terits.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Terits";
+			};
+			name = Debug;
+		};
+		B162D9A62B06004800BC75C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.TeritsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Terits.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Terits";
+			};
+			name = Release;
+		};
+		B162D9A82B06004800BC75C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.TeritsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Terits;
+			};
+			name = Debug;
+		};
+		B162D9A92B06004800BC75C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C39BYRTABZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanle.TeritsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Terits;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B162D9722B06004500BC75C8 /* Build configuration list for PBXProject "Terits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B162D99F2B06004800BC75C8 /* Debug */,
+				B162D9A02B06004800BC75C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B162D9A12B06004800BC75C8 /* Build configuration list for PBXNativeTarget "Terits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B162D9A22B06004800BC75C8 /* Debug */,
+				B162D9A32B06004800BC75C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B162D9A42B06004800BC75C8 /* Build configuration list for PBXNativeTarget "TeritsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B162D9A52B06004800BC75C8 /* Debug */,
+				B162D9A62B06004800BC75C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B162D9A72B06004800BC75C8 /* Build configuration list for PBXNativeTarget "TeritsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B162D9A82B06004800BC75C8 /* Debug */,
+				B162D9A92B06004800BC75C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B162D96F2B06004500BC75C8 /* Project object */;
+}
