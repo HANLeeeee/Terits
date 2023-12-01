@@ -39,7 +39,7 @@ final class GridView: UIView {
     private func addGridLines() {
         for y in stride(from: 0, to: self.bounds.height, by: Constant.gridSize) {
             let lineView = UIView()
-            lineView.backgroundColor = .gray.withAlphaComponent(0.2)
+            lineView.backgroundColor = .gray.withAlphaComponent(0.1)
             self.addSubview(lineView)
             
             lineView.snp.makeConstraints { make in
@@ -51,7 +51,7 @@ final class GridView: UIView {
         
         for x in stride(from: 0, to: self.bounds.width, by: Constant.gridSize) {
             let lineView = UIView()
-            lineView.backgroundColor = .gray.withAlphaComponent(0.2)
+            lineView.backgroundColor = .gray.withAlphaComponent(0.1)
             self.addSubview(lineView)
             
             lineView.snp.makeConstraints { make in

@@ -61,7 +61,8 @@ final class BackgroundViewController: UIViewController {
         self.view.addSubview([gridView, holdBrickView, nextBrickView, rotationButton])
         
         gridView.snp.makeConstraints { make in
-            make.top.leading.equalTo(self.view.safeAreaLayoutGuide)
+            make.top.equalTo(self.view.safeAreaLayoutGuide)
+            make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(10)
             make.width.equalTo(viewWidth)
             make.height.equalTo(viewHeight)
         }
@@ -69,7 +70,7 @@ final class BackgroundViewController: UIViewController {
         holdBrickView.snp.makeConstraints { make in
             make.top.equalTo(gridView.snp.top)
             make.leading.equalTo(gridView.snp.trailing).offset(10)
-            make.trailing.equalTo(self.view.safeAreaLayoutGuide)
+            make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
             make.height.equalTo(Double(viewHeight) * 0.2)
         }
         
