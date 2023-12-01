@@ -14,6 +14,11 @@ final class BackgroundViewController: UIViewController {
     private let holdBrickView = HoldBrickView()
     private let nextBrickView = NextBrickView()
     private let brickView = BrickView()
+    private let rotationButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("돌려돌려", for: .normal)
+        return button
+    }()
     
     private let row: Int = Constant.row
     private let col: Int = Constant.col
@@ -36,6 +41,7 @@ final class BackgroundViewController: UIViewController {
         print("viewDidLoad")
         configUI()
         makeBackgroundArr()
+        configButtons()
         
 //        for i in Constant.backgroundArr {
 //            print(i)
@@ -52,7 +58,7 @@ final class BackgroundViewController: UIViewController {
     }
      
     private func configUI() {
-        self.view.addSubview([gridView, holdBrickView, nextBrickView])
+        self.view.addSubview([gridView, holdBrickView, nextBrickView, rotationButton])
         
         gridView.snp.makeConstraints { make in
             make.top.leading.equalTo(self.view.safeAreaLayoutGuide)
@@ -72,6 +78,12 @@ final class BackgroundViewController: UIViewController {
             make.leading.trailing.equalTo(holdBrickView)
             make.bottom.equalTo(gridView.snp.bottom)
         }
+        
+        rotationButton.snp.makeConstraints { make in
+            make.top.equalTo(gridView.snp.bottom).offset(20)
+            make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
+            make.height.width.equalTo(50)
+        }
     }
     
     private func makeBackgroundArr() {
@@ -86,6 +98,20 @@ final class BackgroundViewController: UIViewController {
         }
         for i in 0..<row+2 {
             Constant.backgroundArr[0][i] = -1
+        }
+    }
+    
+    private func configButtons() {
+        rotationButton.addTarget(self, action: #selector(tapRotationButton), for: .touchUpInside)
+    }
+    
+    @objc private func tapRotationButton() {
+        print("돌리기~")
+        if Constant.brickValue.brickName == "brick5" { return }
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let self else { return }
+            brickView.transform = brickView.transform.rotated(by: .pi / 2)
         }
     }
 }
