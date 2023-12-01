@@ -23,6 +23,5 @@ final class NextBrickView: UIView {
         self.configBackgroundColor(color: .clear)
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.gray.cgColor
-        self.backgroundColor = .clear
     }
 }

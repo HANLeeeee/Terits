@@ -15,6 +15,7 @@
 		B162D9922B06004800BC75C8 /* TeritsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D9912B06004800BC75C8 /* TeritsTests.swift */; };
 		B162D99C2B06004800BC75C8 /* TeritsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D99B2B06004800BC75C8 /* TeritsUITests.swift */; };
 		B162D99E2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D99D2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift */; };
+		B1767E6B2B1A71D60094FDE9 /* BrickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1767E6A2B1A71D60094FDE9 /* BrickView.swift */; };
 		B1F035482B18E9C90047E23F /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F035472B18E9C90047E23F /* Brick.swift */; };
 		B1F0354A2B18EA4C0047E23F /* BrickManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F035492B18EA4C0047E23F /* BrickManager.swift */; };
 		B1F0354D2B18ECB80047E23F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F0354C2B18ECB80047E23F /* Constant.swift */; };
@@ -55,6 +56,7 @@
 		B162D9972B06004800BC75C8 /* TeritsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeritsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B162D99B2B06004800BC75C8 /* TeritsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeritsUITests.swift; sourceTree = "<group>"; };
 		B162D99D2B06004800BC75C8 /* TeritsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeritsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1767E6A2B1A71D60094FDE9 /* BrickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickView.swift; sourceTree = "<group>"; };
 		B1F035472B18E9C90047E23F /* Brick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
 		B1F035492B18EA4C0047E23F /* BrickManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickManager.swift; sourceTree = "<group>"; };
 		B1F0354C2B18ECB80047E23F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				B1F035572B18F5980047E23F /* GridView.swift */,
+				B1767E6A2B1A71D60094FDE9 /* BrickView.swift */,
 				B1F0355B2B190FBF0047E23F /* HoldBrickView.swift */,
 				B1F035592B19081F0047E23F /* NextBrickView.swift */,
 				B162D97E2B06004500BC75C8 /* BackgroundViewController.swift */,
@@ -326,6 +329,7 @@
 				B1F035512B18F42B0047E23F /* UIView+Extensions.swift in Sources */,
 				B1F0354A2B18EA4C0047E23F /* BrickManager.swift in Sources */,
 				B1F0355A2B19081F0047E23F /* NextBrickView.swift in Sources */,
+				B1767E6B2B1A71D60094FDE9 /* BrickView.swift in Sources */,
 				B1F0355C2B190FBF0047E23F /* HoldBrickView.swift in Sources */,
 				B1F035582B18F5980047E23F /* GridView.swift in Sources */,
 				B162D97F2B06004500BC75C8 /* BackgroundViewController.swift in Sources */,

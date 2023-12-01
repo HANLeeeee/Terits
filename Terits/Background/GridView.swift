@@ -27,7 +27,6 @@ final class GridView: UIView {
     
     private func configUI() {
         self.configBackgroundColor(color: .clear)
-        self.backgroundColor = .clear
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.gray.cgColor
         

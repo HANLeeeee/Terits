@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class BrickManager {
     
@@ -63,5 +64,8 @@ final class BrickManager {
         
         let random = Int.random(in: 0..<7)
         return bricks[random]
+    }
+    
+    func makeBrickView() {
     }
 }

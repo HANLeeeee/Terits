@@ -13,6 +13,7 @@ final class BackgroundViewController: UIViewController {
     private let gridView = GridView()
     private let holdBrickView = HoldBrickView()
     private let nextBrickView = NextBrickView()
+    private let brickView = BrickView()
     
     private let row: Int = Constant.row
     private let col: Int = Constant.col
@@ -39,6 +40,15 @@ final class BackgroundViewController: UIViewController {
 //        for i in Constant.backgroundArr {
 //            print(i)
 //        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.view.addSubview(brickView)
+        
+        brickView.snp.makeConstraints { make in
+            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
+            make.centerX.equalTo(gridView.snp.centerX).offset(Constant.gridSize / 2)
+        }
     }
      
     private func configUI() {
