@@ -14,6 +14,17 @@ final class BackgroundViewController: UIViewController {
     private let holdBrickView = HoldBrickView()
     private let nextBrickView = NextBrickView()
     private let brickView = BrickView()
+    
+    private let leftButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("왼쪽", for: .normal)
+        return button
+    }()
+    private let rightButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("오른쪽", for: .normal)
+        return button
+    }()
     private let rotationButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("돌려돌려", for: .normal)
@@ -24,6 +35,7 @@ final class BackgroundViewController: UIViewController {
     private let col: Int = Constant.col
     private let viewWidth: Int = Constant.row * Int(Constant.gridSize)
     private let viewHeight: Int = Constant.col * Int(Constant.gridSize)
+    private var xOffset: CGFloat = 0
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -49,7 +61,7 @@ final class BackgroundViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.view.addSubview(brickView)
+        gridView.addSubview(brickView)
         
         brickView.snp.makeConstraints { make in
             make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
@@ -58,7 +70,7 @@ final class BackgroundViewController: UIViewController {
     }
      
     private func configUI() {
-        self.view.addSubview([gridView, holdBrickView, nextBrickView, rotationButton])
+        self.view.addSubview([gridView, holdBrickView, nextBrickView, leftButton, rightButton, rotationButton])
         
         gridView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide)
@@ -80,8 +92,20 @@ final class BackgroundViewController: UIViewController {
             make.bottom.equalTo(gridView.snp.bottom)
         }
         
-        rotationButton.snp.makeConstraints { make in
+        leftButton.snp.makeConstraints { make in
             make.top.equalTo(gridView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.height.width.equalTo(50)
+        }
+        
+        rightButton.snp.makeConstraints { make in
+            make.top.equalTo(leftButton.snp.top)
+            make.leading.equalTo(leftButton.snp.trailing).offset(20)
+            make.height.width.equalTo(rightButton.snp.height)
+        }
+        
+        rotationButton.snp.makeConstraints { make in
+            make.top.equalTo(leftButton.snp.top)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
             make.height.width.equalTo(50)
         }
@@ -103,7 +127,26 @@ final class BackgroundViewController: UIViewController {
     }
     
     private func configButtons() {
+        leftButton.addTarget(self, action: #selector(tapLeftButton), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(tapRigthButton), for: .touchUpInside)
         rotationButton.addTarget(self, action: #selector(tapRotationButton), for: .touchUpInside)
+    }
+    
+    @objc private func tapLeftButton() {
+        print("왼쪽")
+        xOffset -= Constant.gridSize
+        brickView.snp.updateConstraints { make in
+//            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
+            make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + xOffset)
+        }
+    }
+    
+    @objc private func tapRigthButton() {
+        print("오른쪽")
+        xOffset += Constant.gridSize
+        brickView.snp.updateConstraints { make in
+            make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + xOffset)
+        }
     }
     
     @objc private func tapRotationButton() {
@@ -114,5 +157,11 @@ final class BackgroundViewController: UIViewController {
             guard let self else { return }
             brickView.transform = brickView.transform.rotated(by: .pi / 2)
         }
+    }
+    
+    private func isMovable() -> Bool {
+        
+        
+        return true
     }
 }
