@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B1192BC92B1E207300EBD27B /* LeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192BC82B1E207300EBD27B /* LeftButton.swift */; };
 		B1192BCB2B1E27D500EBD27B /* RightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192BCA2B1E27D500EBD27B /* RightButton.swift */; };
+		B1192BCF2B1E2A5A00EBD27B /* DownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192BCE2B1E2A5A00EBD27B /* DownButton.swift */; };
 		B162D97B2B06004500BC75C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97A2B06004500BC75C8 /* AppDelegate.swift */; };
 		B162D97D2B06004500BC75C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97C2B06004500BC75C8 /* SceneDelegate.swift */; };
 		B162D97F2B06004500BC75C8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97E2B06004500BC75C8 /* BackgroundViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		B1192BC82B1E207300EBD27B /* LeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButton.swift; sourceTree = "<group>"; };
 		B1192BCA2B1E27D500EBD27B /* RightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButton.swift; sourceTree = "<group>"; };
+		B1192BCE2B1E2A5A00EBD27B /* DownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownButton.swift; sourceTree = "<group>"; };
 		B162D9772B06004500BC75C8 /* Terits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B162D97A2B06004500BC75C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B162D97C2B06004500BC75C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				B1192BC82B1E207300EBD27B /* LeftButton.swift */,
 				B1192BCA2B1E27D500EBD27B /* RightButton.swift */,
+				B1192BCE2B1E2A5A00EBD27B /* DownButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				B1F035512B18F42B0047E23F /* UIView+Extensions.swift in Sources */,
 				B1F0354A2B18EA4C0047E23F /* BrickManager.swift in Sources */,
 				B1192BC92B1E207300EBD27B /* LeftButton.swift in Sources */,
+				B1192BCF2B1E2A5A00EBD27B /* DownButton.swift in Sources */,
 				B1F0355A2B19081F0047E23F /* NextBrickView.swift in Sources */,
 				B1767E6B2B1A71D60094FDE9 /* BrickView.swift in Sources */,
 				B1F0355C2B190FBF0047E23F /* HoldBrickView.swift in Sources */,

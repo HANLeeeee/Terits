@@ -9,7 +9,7 @@ import UIKit
 
 final class RightButton: UIButton {
     
-    var movedBrick: MovedBrick?
+    weak var movedBrick: MovedBrick?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +29,7 @@ final class RightButton: UIButton {
     @objc private func tapRightButton() {
         if isMovable() {
             Constant.xOffset += Constant.gridSize
-            movedBrick?.move()
+            movedBrick?.moveLeftRight()
             
             Constant.dx += 1
             for point in Constant.brickValue.points {

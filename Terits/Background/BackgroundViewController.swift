@@ -8,8 +8,10 @@
 import UIKit
 import SnapKit
 
-protocol MovedBrick {
-    func move()
+protocol MovedBrick: AnyObject {
+    func moveLeftRight()
+    func moveDown()
+    func impossibleDown()
 }
 
 final class BackgroundViewController: UIViewController {
@@ -21,6 +23,7 @@ final class BackgroundViewController: UIViewController {
     
     private let leftButton = LeftButton()
     private let rightButton = RightButton()
+    private let downButton = DownButton()
     private let rotationButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("돌려돌려", for: .normal)
@@ -31,6 +34,7 @@ final class BackgroundViewController: UIViewController {
     private let col: Int = Constant.col
     private let viewWidth: Int = Constant.row * Int(Constant.gridSize)
     private let viewHeight: Int = Constant.col * Int(Constant.gridSize)
+    private var timer: DispatchSourceTimer?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -45,38 +49,19 @@ final class BackgroundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.configBackgroundColor()
-        print("viewDidLoad")
         configUI()
         makeBackgroundArr()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         makeBrick()
         configButtons()
-    }
-    
-    private func makeBrick() {
-        brickView = BrickView()
-        gridView.addSubview(brickView)
-        
-        brickView.snp.makeConstraints { make in
-            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
-            make.centerX.equalTo(gridView.snp.centerX).offset(Constant.gridSize / 2)
-        }
-        
-        for point in Constant.brickValue.points {
-            let x = Int(point.x) + Constant.dx
-            let y = Int(point.y) + Constant.dy
-            
-            Constant.backgroundArr[y][x] = 1
-        }
-//        for i in Constant.backgroundArr {
-//            print(i)
-//        }
+        startDownAnimation()
     }
      
     private func configUI() {
-        self.view.addSubview([gridView, holdBrickView, nextBrickView, leftButton, rightButton, rotationButton])
+        self.view.addSubview([gridView, holdBrickView, nextBrickView, leftButton, rightButton, downButton, rotationButton])
         
         gridView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide)
@@ -107,13 +92,20 @@ final class BackgroundViewController: UIViewController {
         rightButton.snp.makeConstraints { make in
             make.top.equalTo(leftButton.snp.top)
             make.leading.equalTo(leftButton.snp.trailing).offset(20)
-            make.height.width.equalTo(rightButton.snp.height)
+            make.height.width.equalTo(leftButton.snp.height)
+        }
+        
+        // TODO: 레이아웃 변경해야함
+        downButton.snp.makeConstraints { make in
+            make.top.equalTo(leftButton.snp.top)
+            make.leading.equalTo(rightButton.snp.trailing).offset(20)
+            make.height.width.equalTo(leftButton.snp.height)
         }
         
         rotationButton.snp.makeConstraints { make in
             make.top.equalTo(leftButton.snp.top)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-10)
-            make.height.width.equalTo(50)
+            make.height.width.equalTo(leftButton.snp.height)
         }
     }
     
@@ -132,11 +124,47 @@ final class BackgroundViewController: UIViewController {
         }
     }
     
+    private func makeBrick() {
+        Constant.reset()
+        brickView = BrickView()
+        gridView.addSubview(brickView)
+        
+        brickView.snp.makeConstraints { make in
+            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
+            make.centerX.equalTo(gridView.snp.centerX).offset(Constant.gridSize / 2)
+        }
+        
+        for point in Constant.brickValue.points {
+            let x = Int(point.x) + Constant.dx
+            let y = Int(point.y) + Constant.dy
+            
+            Constant.backgroundArr[y][x] = 1
+        }
+        
+        
+//        for i in Constant.backgroundArr {
+//            print(i)
+//        }
+    }
+    
     private func configButtons() {
         leftButton.movedBrick = self
         rightButton.movedBrick = self
+        downButton.movedBrick = self
         
         rotationButton.addTarget(self, action: #selector(tapRotationButton), for: .touchUpInside)
+    }
+    
+    private func startDownAnimation() {
+        timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+        timer?.schedule(deadline: .now(), repeating: 1.0)
+        timer?.setEventHandler { [weak self] in
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                downButton.tapDownButton()
+            }
+        }
+        timer?.resume()
     }
     
     @objc private func tapRotationButton() {
@@ -151,9 +179,22 @@ final class BackgroundViewController: UIViewController {
 }
 
 extension BackgroundViewController: MovedBrick {
-    func move() {
+    func moveLeftRight() {
+        print("moveLeftRight")
         brickView.snp.updateConstraints { make in
             make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + Constant.xOffset)
         }
+    }
+    
+    func moveDown() {
+        print("moveDown")
+        brickView.snp.updateConstraints { make in
+            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2 + Constant.yOffset)
+        }
+    }
+    
+    func impossibleDown() {
+        print("가장밑")
+        makeBrick()
     }
 }
