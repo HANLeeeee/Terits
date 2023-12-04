@@ -16,8 +16,12 @@ struct Constant {
     
     static var brickValue: Brick = BrickManager().makeBrick()
     static let gridSize: CGFloat = CGFloat(Constant.brickValue.brickSize)
-    
     static var backgroundArr: [[Int]] = []
+    
+    static var dx = 6
+    static var dy = 1
+    
+    static var xOffset: CGFloat = 0
 }
 
 

@@ -8,23 +8,19 @@
 import UIKit
 import SnapKit
 
+protocol MovedBrick {
+    func move()
+}
+
 final class BackgroundViewController: UIViewController {
     
     private let gridView = GridView()
     private let holdBrickView = HoldBrickView()
     private let nextBrickView = NextBrickView()
-    private let brickView = BrickView()
+    private var brickView = UIView()
     
-    private let leftButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("왼쪽", for: .normal)
-        return button
-    }()
-    private let rightButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("오른쪽", for: .normal)
-        return button
-    }()
+    private let leftButton = LeftButton()
+    private let rightButton = RightButton()
     private let rotationButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("돌려돌려", for: .normal)
@@ -35,7 +31,6 @@ final class BackgroundViewController: UIViewController {
     private let col: Int = Constant.col
     private let viewWidth: Int = Constant.row * Int(Constant.gridSize)
     private let viewHeight: Int = Constant.col * Int(Constant.gridSize)
-    private var xOffset: CGFloat = 0
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -53,20 +48,31 @@ final class BackgroundViewController: UIViewController {
         print("viewDidLoad")
         configUI()
         makeBackgroundArr()
-        configButtons()
-        
-//        for i in Constant.backgroundArr {
-//            print(i)
-//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        makeBrick()
+        configButtons()
+    }
+    
+    private func makeBrick() {
+        brickView = BrickView()
         gridView.addSubview(brickView)
         
         brickView.snp.makeConstraints { make in
             make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
             make.centerX.equalTo(gridView.snp.centerX).offset(Constant.gridSize / 2)
         }
+        
+        for point in Constant.brickValue.points {
+            let x = Int(point.x) + Constant.dx
+            let y = Int(point.y) + Constant.dy
+            
+            Constant.backgroundArr[y][x] = 1
+        }
+//        for i in Constant.backgroundArr {
+//            print(i)
+//        }
     }
      
     private func configUI() {
@@ -127,26 +133,10 @@ final class BackgroundViewController: UIViewController {
     }
     
     private func configButtons() {
-        leftButton.addTarget(self, action: #selector(tapLeftButton), for: .touchUpInside)
-        rightButton.addTarget(self, action: #selector(tapRigthButton), for: .touchUpInside)
+        leftButton.movedBrick = self
+        rightButton.movedBrick = self
+        
         rotationButton.addTarget(self, action: #selector(tapRotationButton), for: .touchUpInside)
-    }
-    
-    @objc private func tapLeftButton() {
-        print("왼쪽")
-        xOffset -= Constant.gridSize
-        brickView.snp.updateConstraints { make in
-//            make.top.equalTo(gridView.snp.top).offset(Constant.gridSize / 2)
-            make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + xOffset)
-        }
-    }
-    
-    @objc private func tapRigthButton() {
-        print("오른쪽")
-        xOffset += Constant.gridSize
-        brickView.snp.updateConstraints { make in
-            make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + xOffset)
-        }
     }
     
     @objc private func tapRotationButton() {
@@ -158,10 +148,12 @@ final class BackgroundViewController: UIViewController {
             brickView.transform = brickView.transform.rotated(by: .pi / 2)
         }
     }
-    
-    private func isMovable() -> Bool {
-        
-        
-        return true
+}
+
+extension BackgroundViewController: MovedBrick {
+    func move() {
+        brickView.snp.updateConstraints { make in
+            make.centerX.equalTo(gridView.snp.centerX).offset((Constant.gridSize / 2) + Constant.xOffset)
+        }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1192BC92B1E207300EBD27B /* LeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192BC82B1E207300EBD27B /* LeftButton.swift */; };
+		B1192BCB2B1E27D500EBD27B /* RightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192BCA2B1E27D500EBD27B /* RightButton.swift */; };
 		B162D97B2B06004500BC75C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97A2B06004500BC75C8 /* AppDelegate.swift */; };
 		B162D97D2B06004500BC75C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97C2B06004500BC75C8 /* SceneDelegate.swift */; };
 		B162D97F2B06004500BC75C8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162D97E2B06004500BC75C8 /* BackgroundViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1192BC82B1E207300EBD27B /* LeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButton.swift; sourceTree = "<group>"; };
+		B1192BCA2B1E27D500EBD27B /* RightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButton.swift; sourceTree = "<group>"; };
 		B162D9772B06004500BC75C8 /* Terits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B162D97A2B06004500BC75C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B162D97C2B06004500BC75C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1192BC52B1E204900EBD27B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B1192BC82B1E207300EBD27B /* LeftButton.swift */,
+				B1192BCA2B1E27D500EBD27B /* RightButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		B162D96E2B06004500BC75C8 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 				B1F0354B2B18ECA30047E23F /* Constants */,
 				B1F0354F2B18F41E0047E23F /* Extensions */,
 				B1F035462B18E9BF0047E23F /* Model */,
+				B1192BC52B1E204900EBD27B /* Buttons */,
 				B1F035562B18F5820047E23F /* Background */,
 			);
 			path = Terits;
@@ -328,12 +342,14 @@
 			files = (
 				B1F035512B18F42B0047E23F /* UIView+Extensions.swift in Sources */,
 				B1F0354A2B18EA4C0047E23F /* BrickManager.swift in Sources */,
+				B1192BC92B1E207300EBD27B /* LeftButton.swift in Sources */,
 				B1F0355A2B19081F0047E23F /* NextBrickView.swift in Sources */,
 				B1767E6B2B1A71D60094FDE9 /* BrickView.swift in Sources */,
 				B1F0355C2B190FBF0047E23F /* HoldBrickView.swift in Sources */,
 				B1F035582B18F5980047E23F /* GridView.swift in Sources */,
 				B162D97F2B06004500BC75C8 /* BackgroundViewController.swift in Sources */,
 				B1F035482B18E9C90047E23F /* Brick.swift in Sources */,
+				B1192BCB2B1E27D500EBD27B /* RightButton.swift in Sources */,
 				B162D97B2B06004500BC75C8 /* AppDelegate.swift in Sources */,
 				B162D97D2B06004500BC75C8 /* SceneDelegate.swift in Sources */,
 				B1F0354D2B18ECB80047E23F /* Constant.swift in Sources */,
